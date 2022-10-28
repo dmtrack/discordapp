@@ -9,27 +9,35 @@ function Navibar() {
   const navigate = useNavigate();
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <NavbarBrand>Discord</NavbarBrand>
-        <NavbarToggle aria-controls="responsible-navbar-nav" />
-        <NavbarCollapse id='"responsible-navbar-nav"'>
-          <Nav className="mr-auto">
-            <Nav.Link>
-              <Link to="/direct">Direct</Link>
-              <Link to="/server1">Server 1</Link>
-              <Link to="/server2">Server 2</Link>
-            </Nav.Link>
-          </Nav>
-          <Nav>
-            <Button type="secondary" onClick={() => navigate("/inbox")}>
-              Inbox
-            </Button>
-            <Button type="secondary" onClick={() => navigate("/help")}>
-              Help
-            </Button>
-          </Nav>
-        </NavbarCollapse>
-      </Navbar>
+      <div className="navi-bar">
+        <Navbar
+          collapseOnSelect
+          expand="sm"
+          bg="dark"
+          variant="dark"
+          className="navi-bar"
+        >
+          <NavbarBrand>Discord</NavbarBrand>
+          <NavbarToggle aria-controls="responsible-navbar-nav" />
+          <NavbarCollapse id='"responsible-navbar-nav"'>
+            <Nav className="mr-auto">
+              <Nav.Link>
+                <Link to="/direct">Direct</Link>
+                <Link to="/server1">Server 1</Link>
+                <Link to="/server2">Server 2</Link>
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Button type="secondary" onClick={() => navigate("/inbox")}>
+                Inbox
+              </Button>
+              <Button type="secondary" onClick={() => navigate("/help")}>
+                Help
+              </Button>
+            </Nav>
+          </NavbarCollapse>
+        </Navbar>
+      </div>
     </>
   );
 }
