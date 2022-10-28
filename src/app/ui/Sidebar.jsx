@@ -8,59 +8,68 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { MdOutlineRemove } from "react-icons/md";
+import Tippy from "@tippyjs/react";
 
 function Sidebar({ children }) {
   const mainLogo = {
     path: "/direct",
-    name: "",
-    icon: <TbBrandDiscord size={30} />,
+    name: "Direct messages",
+    icon: <TbBrandDiscord size={38} color="white" />,
   };
   const menuItem = [
     {
       path: "/Server1",
-      name: "",
-      icon: <FaSteamSquare size={35} />,
+      name: "steamServer",
+      icon: <FaSteamSquare size={38} />,
     },
     {
       path: "/Server2",
-      name: "",
-      icon: <FaSnapchatSquare size={35} />,
+      name: "snapchatServer",
+      icon: <FaSnapchatSquare size={38} />,
     },
     {
       path: "/Server3",
-      name: "",
-      icon: <FaGithubSquare size={35} />,
+      name: "githubServer",
+      icon: <FaGithubSquare size={38} />,
     },
     {
       path: "/Server4",
-      name: "",
-      icon: <FaRedditSquare size={35} />,
+      name: "redditServer",
+      icon: <FaRedditSquare size={38} />,
     },
     {
       path: "/Server5",
-      name: "",
-      icon: <FaBehanceSquare size={35} />,
+      name: "behanceServer",
+      icon: <FaBehanceSquare size={38} />,
     },
   ];
   return (
     <div className="container">
       <div className="sidebar">
         <div className="top_section">
-          <Link to={mainLogo.path}>{mainLogo.icon} </Link>
+          <Tippy
+            content={<span style={{ color: "wheat" }}>{mainLogo.name}</span>}
+            placement="right"
+          >
+            <Link to={mainLogo.path}>{mainLogo.icon} </Link>
+          </Tippy>
           <div className="bars">
             <MdOutlineRemove />
           </div>
         </div>
         {menuItem.map((item, index) => (
-          <Link
-            to={item.path}
-            className="link"
-            activeclassname="active"
-            key={index}
-          >
-            <div className="icon">{item.icon}</div>
-            <div className="link_text">{item.name}</div>
-          </Link>
+          <>
+            <Tippy content={<span>{item.name}</span>} placement="right">
+              <Link
+                to={item.path}
+                className="link"
+                activeclassname="active"
+                key={index}
+              >
+                <div className="icon">{item.icon}</div>
+              </Link>
+            </Tippy>
+          </>
         ))}
       </div>
       <main>{children}</main>

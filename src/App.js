@@ -8,6 +8,7 @@ import { Search } from "./app/pages/Search";
 import { Help } from "./app/pages/Help";
 import { Sidebar } from "./app/ui/Sidebar";
 import "./css/style.css";
+import "tippy.js/dist/tippy.css";
 
 function App() {
   return (
