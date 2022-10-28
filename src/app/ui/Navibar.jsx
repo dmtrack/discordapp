@@ -13,13 +13,16 @@ function Navibar() {
         <Navbar
           collapseOnSelect
           expand="sm"
-          bg="dark"
+          bg="#36393F"
           variant="dark"
           className="navi-bar"
+          style={{
+            borderBottom: "outset",
+            borderWidth: "1px",
+            borderColor: "darkgray",
+          }}
         >
-          <NavbarBrand>
-            DiscordDiscordDiscordDiscordDiscordDiscordDiscordDiscordDiscordDiscord
-          </NavbarBrand>
+          <NavbarBrand>Discord</NavbarBrand>
           <NavbarToggle aria-controls="responsible-navbar-nav" />
           <NavbarCollapse id='"responsible-navbar-nav"'>
             <Nav className="mr-auto">
@@ -30,10 +33,18 @@ function Navibar() {
               </Nav.Link>
             </Nav>
             <Nav>
-              <Button type="secondary" onClick={() => navigate("/inbox")}>
+              <Button
+                className="btn-secondary"
+                type="secondary"
+                onClick={() => navigate("/inbox")}
+              >
                 Inbox
               </Button>
-              <Button type="secondary" onClick={() => navigate("/help")}>
+              <Button
+                className="btn-secondary"
+                type="secondary"
+                onClick={() => navigate("/help")}
+              >
                 Help
               </Button>
             </Nav>

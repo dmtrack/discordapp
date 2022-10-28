@@ -44,34 +44,32 @@ function Sidebar() {
     },
   ];
   return (
-    <div className="container">
-      <div className="sidebar">
-        <div className="top_section">
-          <Tippy
-            content={<span style={{ color: "wheat" }}>{mainLogo.name}</span>}
-            placement="right"
-          >
-            <Link to={mainLogo.path}>{mainLogo.icon} </Link>
-          </Tippy>
-          <div className="bars">
-            <MdOutlineRemove />
-          </div>
+    <div className="sidebar">
+      <div className="top_section">
+        <Tippy
+          content={<span style={{ color: "wheat" }}>{mainLogo.name}</span>}
+          placement="right"
+        >
+          <Link to={mainLogo.path}>{mainLogo.icon} </Link>
+        </Tippy>
+        <div className="bars">
+          <MdOutlineRemove />
         </div>
-        {menuItem.map((item, index) => (
-          <>
-            <Tippy content={<span>{item.name}</span>} placement="right">
-              <Link
-                to={item.path}
-                className="link"
-                activeclassname="active"
-                key={index}
-              >
-                <div className="icon">{item.icon}</div>
-              </Link>
-            </Tippy>
-          </>
-        ))}
       </div>
+      {menuItem.map((item, index) => (
+        <>
+          <Tippy content={<span>{item.name}</span>} placement="right">
+            <Link
+              to={item.path}
+              className="link"
+              activeclassname="active"
+              key={index}
+            >
+              <div className="icon">{item.icon}</div>
+            </Link>
+          </Tippy>
+        </>
+      ))}
     </div>
   );
 }

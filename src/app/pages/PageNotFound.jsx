@@ -1,7 +1,10 @@
 function PageNotFound() {
   return (
     <>
-      <h1>404 page not found</h1>
+      <div className="main-content">
+        {" "}
+        <h1>404 page not found</h1>
+      </div>
     </>
   );
 }

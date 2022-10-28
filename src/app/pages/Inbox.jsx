@@ -1,7 +1,10 @@
 function Inbox() {
   return (
     <>
-      <h1>Inbox</h1>
+      <div className="main-content">
+        {" "}
+        <h1>Inbox</h1>
+      </div>
     </>
   );
 }

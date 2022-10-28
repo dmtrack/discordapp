@@ -16,33 +16,35 @@
 }
 
 .main-content {
-
     background: #36393F;
     width:100vw;
-    height: 100vh;
+    height: 89vh;
     display: flex;
-}
+    color: ghostwhite;
 
+}
 
 .navi-bar {
     display: inline-block;
     padding-bottom: 10px;
-    background: #36393F;
     width:100vw;
+    height: 50px;
+
 
 }
-
 
 .sidebar {
     background: #202225;
     color: gray;
     height: 100vh;
+    min-height: 100vh;
 
 }
 .sidebar-second {
     background: #2F3136;
     color: gray;
     height: 100vh;
+    min-height: 100vh;
     width:250px;
     max-width:250px;
     display: inline-block;
@@ -70,10 +72,11 @@
     margin-left: 0px;
 }
 
+
 .link {
     display: flex;
     color: white;
-    padding: 10px 15px;
+    padding: 5px 15px;
     transition: all 0.5s;
 }
 

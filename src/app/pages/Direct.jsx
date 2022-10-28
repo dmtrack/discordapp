@@ -1,7 +1,10 @@
 function DirectMessages() {
   return (
     <>
-      <h1>Direct</h1>
+      <div className="main-content">
+        {" "}
+        <h1>Direct</h1>
+      </div>
     </>
   );
 }
