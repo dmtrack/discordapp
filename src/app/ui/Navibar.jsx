@@ -17,7 +17,9 @@ function Navibar() {
           variant="dark"
           className="navi-bar"
         >
-          <NavbarBrand>Discord</NavbarBrand>
+          <NavbarBrand>
+            DiscordDiscordDiscordDiscordDiscordDiscordDiscordDiscordDiscordDiscord
+          </NavbarBrand>
           <NavbarToggle aria-controls="responsible-navbar-nav" />
           <NavbarCollapse id='"responsible-navbar-nav"'>
             <Nav className="mr-auto">

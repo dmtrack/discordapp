@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineRemove } from "react-icons/md";
 import Tippy from "@tippyjs/react";
 
-function Sidebar({ children }) {
+function Sidebar() {
   const mainLogo = {
     path: "/direct",
     name: "Direct messages",
@@ -72,7 +72,6 @@ function Sidebar({ children }) {
           </>
         ))}
       </div>
-      <main>{children}</main>
     </div>
   );
 }

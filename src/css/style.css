@@ -4,32 +4,48 @@
     text-decoration: none;
 }
 
-.container {
+.main-container {
     display: flex;
-
-}
-
-main {
+    flex-direction: row;
     width: 100%;
     background: #36393F;
-
 }
+
+.container {
+    display: flex;
+}
+
+.main-content {
+
+    background: #36393F;
+    width:100vw;
+    height: 100vh;
+    display: flex;
+}
+
 
 .navi-bar {
     display: inline-block;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background: #36393F;
+    width:100vw;
 
 }
+
 
 .sidebar {
     background: #202225;
     color: gray;
     height: 100vh;
+
 }
 .sidebar-second {
-    background: #202225;
+    background: #2F3136;
     color: gray;
     height: 100vh;
+    width:250px;
+    max-width:250px;
+    display: inline-block;
 }
 
 .top_section {

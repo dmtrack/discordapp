@@ -3,7 +3,8 @@ function Server({ props }) {
 
   return (
     <>
-      <h1>Server</h1>
+      <div className="main-content"></div>
+      <h1>Serverd</h1>
     </>
   );
 }

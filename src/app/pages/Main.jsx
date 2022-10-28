@@ -26,7 +26,7 @@ function Main() {
       {isLoading ? (
         <Preloader />
       ) : (
-        <div>Servers1</div>
+        <div className="main-content">Servers1</div>
         // <main className="container content">
         //   <ServerList servers={servers} />
         // </main>
