@@ -33,15 +33,19 @@ function SidebarSecond() {
   ];
   return (
     <>
-      <div className="sidebar-second">
+      <div>
         <div
           style={{
             height: "50px",
             borderBottom: "outset",
             borderWidth: "1px",
             borderColor: "darkgray",
+            display: "table-cell",
+            verticalAlign: "middle",
           }}
-        ></div>
+        >
+          Second NavBar Second NavBar Second NavBar
+        </div>
       </div>
     </>
   );

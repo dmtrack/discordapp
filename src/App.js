@@ -17,19 +17,18 @@ function App() {
     <>
       <Router>
         <div className="main-container">
-          <Sidebar>
-            <Routes>
-              <Route path="/direct" element={<DirectMessages />} />
-            </Routes>
-          </Sidebar>
-          <div>
+          <div className="first-container">
+            <Sidebar>
+              <Routes>
+                <Route path="/direct" element={<DirectMessages />} />
+              </Routes>
+            </Sidebar>
+          </div>
+          <div className="second-container">
             <SidebarSecond />
           </div>
-          <div>
-            <div className="navi-bar">
-              <Navibar />
-            </div>
-            {/*<Row className="main">*/}
+          <div className="third-container">
+            <Navibar />
             {/*<Main />*/}
             <Routes>
               <Route exact path="/" element={<Main />} />

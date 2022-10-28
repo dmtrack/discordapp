@@ -50,7 +50,9 @@ function Sidebar() {
           content={<span style={{ color: "wheat" }}>{mainLogo.name}</span>}
           placement="right"
         >
-          <Link to={mainLogo.path}>{mainLogo.icon} </Link>
+          <Link to={mainLogo.path} key="99">
+            {mainLogo.icon}{" "}
+          </Link>
         </Tippy>
         <div className="bars">
           <MdOutlineRemove />
@@ -58,14 +60,15 @@ function Sidebar() {
       </div>
       {menuItem.map((item, index) => (
         <>
-          <Tippy content={<span>{item.name}</span>} placement="right">
-            <Link
-              to={item.path}
-              className="link"
-              activeclassname="active"
-              key={index}
-            >
-              <div className="icon">{item.icon}</div>
+          <Tippy
+            content={<span>{item.name}</span>}
+            placement="right"
+            key={index}
+          >
+            <Link to={item.path} className="link" activeclassname="active">
+              <div className="icon" key={index}>
+                {item.icon}{" "}
+              </div>
             </Link>
           </Tippy>
         </>
