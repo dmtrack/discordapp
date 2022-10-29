@@ -103,13 +103,15 @@
 }
 
 .input-nav {
-    background-color: #3F4756 ;
-    height: 25px;
     align-self: center;
-    font-size: 15px;
-    border-style: unset;
-    color: ghostwhite;
+    background-color: #3f4756;
     border-radius: 5px;
+    border-style: initial;
+    color: #f8f8ff;
+    font-size: 15px;
+    height: 25px;
+    padding-left: 15px;
+    outline: none;
 }
 
 .input-nav:hover {
@@ -128,6 +130,11 @@
     border-radius: 5px;
     padding: 15px;
     margin: 0 15px;
+}
+
+.input-message:hover {
+    background-color: #B9BBBE;
+    border: #3F4756 ;
 }
 
 
@@ -177,12 +184,14 @@
     color: ghostwhite;
     height: 80px;
     width: 500px;
-    border-style: dotted;
     border-color: #818387;
     border-width: 1px;
     border-radius: 10px;
     font-size: 12px;
     margin: 5px;
+    background: linear-gradient(145deg, #171c20, #1b2125);
+    box-shadow:  5px 5px 10px #161b1e,
+    -5px -5px 10px #1c2328;
 }
 
 .message-image {
@@ -196,7 +205,8 @@
 
 .text-message:hover {
     border: #3F4756;
-    transition: 0.3s;;
+    transition: 0.3s;
+    box-shadow: 0 10px 10px 0 rgb(98 62 99 / 10%);
 }
 
 .button-small {
@@ -208,7 +218,7 @@
     width: 70px;
     border: 0;
     border-radius: 4px;
-    transition: 0.6s;
+    transition: 0.3s;
     overflow: hidden;
     text-align: center; line-height: 20px;
 }
