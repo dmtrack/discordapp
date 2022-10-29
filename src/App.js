@@ -16,7 +16,7 @@ import { Members } from "./app/pages/Members";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/discordapp">
         <div className="main-container">
           <div className="first-container">
             <Sidebar>
