@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
-import { API_URL, API_KEY } from "../../config";
-import { Preloader } from "../components/Preloader";
+import { Search } from "../pages/Search";
 import React from "react";
+import { useState, useEffect } from "react";
+import { API_KEY, API_URL } from "../../config";
 
-function SidebarSecond(name) {
+function Members() {
   const [users, setUsers] = useState([]);
   const [userLoading, setUserLoading] = useState(false);
-
   useEffect(() => {
     try {
       setUserLoading(true);
@@ -21,40 +20,16 @@ function SidebarSecond(name) {
       setUserLoading(false);
     }
   }, []);
-
+  console.log(users);
   return (
     <>
-      <div>
-        <div
-          style={{
-            height: "100%",
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <h4> Direct messages</h4>
-        </div>
-        <div
-          style={{
-            height: "40px",
-            borderBottom: "outset",
-            borderWidth: "1px",
-            borderColor: "darkgray",
-            display: "flex",
-            alignItems: "center",
-          }}
-        ></div>
-      </div>
-      {userLoading ? (
-        <Preloader />
-      ) : (
-        <div className="list-users">
+      <div className="main-content">
+        <h1>Members</h1>
+        <div className="list-members">
           {users.map((u) => (
-            <div className="user" key={u.id}>
+            <div className="member" key={u.id}>
               <img
-                className="user-image"
+                className="member-image"
                 src={`https://avatars.dicebear.com/api/avataaars/${(
                   Math.random() + 1
                 )
@@ -69,9 +44,9 @@ function SidebarSecond(name) {
             </div>
           ))}
         </div>
-      )}
+      </div>
     </>
   );
 }
 
-export { SidebarSecond };
+export { Members };

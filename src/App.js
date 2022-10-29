@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { SidebarSecond } from "./app/ui/SidebarSecond";
 import { Server } from "./app/components/Server";
 import { Notifications } from "./app/pages/Notifications";
-import { Members } from "./app/pages/Page";
+import { Members } from "./app/pages/Members";
 
 function App() {
   return (

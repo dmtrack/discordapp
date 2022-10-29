@@ -5,17 +5,44 @@ import { useState } from "react";
 import { Preloader } from "./Preloader";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function Server() {
-  const [title, setTitle] = useState("hackers");
+const serversPath = {
+  "Hackers server": {
+    name: "Hackers server",
+    path: "hackers",
+  },
+  "Steam server": {
+    name: "Steam server",
+    path: "saul",
+  },
+  "Snapchat server": {
+    name: "Snapchat server",
+    path: "batman",
+  },
+  "Github server": {
+    name: "Github server",
+    path: "terminator",
+  },
+  "Reddit server": {
+    name: "Reddit server",
+    path: "kazakh",
+  },
+  "Behance server": {
+    name: "Behance server",
+    path: "america",
+  },
+};
 
+function Server() {
   let { name } = useParams();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  const getPath = () => serversPath[name].path;
   const requestData = () => {
     try {
       setIsLoading(true);
-      fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${title}`)
+      fetch(
+        `https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${getPath()}`
+      )
         .then((responce) => responce.json())
         .then((data) => {
           setData(data.Search);
@@ -29,30 +56,8 @@ function Server() {
 
   useEffect(() => {
     requestData();
-  }, []);
-  //
-  // if (data) {
-  //   switch (name) {
-  //     case "Steam server":
-  //       setTitle("saul");
-  //       break;
-  //     case "Snapchat server":
-  //       setTitle("batman");
-  //       break;
-  //     case "Github server":
-  //       setTitle("terminator");
-  //       break;
-  //     case "Reddit server":
-  //       setTitle("kazakh");
-  //       break;
-  //     case "Behance server":
-  //       setTitle("america");
-  //       break;
-  //     default:
-  //       setTitle("hackers");
-  //   }
-  // }
-
+  }, [name]);
+  console.log(data);
   return (
     <>
       {isLoading ? (
@@ -63,20 +68,26 @@ function Server() {
           <div style={{ gap: "3px", display: "flex", textAlign: "center" }}>
             <button className="button-small">edit</button>
             <button className="button-small">reload</button>
+            <button className="button-small">contacts</button>
           </div>
           <div className="text-area">
-            {data.map((e) => (
-              <div className="text-message" key={e.imdbID}>
-                <p style={{ margin: "5px 5px" }}>Type: {e.Type}</p>
-                <p style={{ margin: "5px 5px" }}>Title: {e.Title}</p>
-                <p style={{ margin: "5px 5px" }}>Year: {e.Year}</p>
-                {/*<img*/}
-                {/*  className="activator"*/}
-                {/*  src={`https://via.placeholder.com/300x400?text=${title}`}*/}
-                {/*  alt="poster"*/}
-                {/*/>*/}
-              </div>
-            ))}
+            {data &&
+              data.map((e) => (
+                <div className="text-message" key={e.imdbID}>
+                  <div>
+                    <p style={{ margin: "5px 5px" }}>Type: {e.Type}</p>
+                    <p style={{ margin: "5px 5px" }}>Title: {e.Title}</p>
+                    <p style={{ margin: "5px 5px" }}>Year: {e.Year}</p>
+                  </div>
+                  <div>
+                    <img
+                      className="message-image"
+                      src={`${e.Poster}`}
+                      alt="poster"
+                    />
+                  </div>
+                </div>
+              ))}
           </div>
           <div style={{ display: "flex" }}>
             <Search className="input-message" placeholder="Type here..." />
