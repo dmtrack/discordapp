@@ -277,12 +277,20 @@
     background: mediumpurple;
     cursor: pointer;}
 
+
 .member-image {
     width: 100px;
     height: 100px;
     margin: 10px 10px;
 
 }
+.member-image:hover {
+    border-radius: 50px;
+    background: #202425;
+    box-shadow:  20px 20px 60px #1b1f1f,
+    -20px -20px 60px #25292b;
+}
+
 
 .list-members {
     display: flex;
@@ -298,6 +306,7 @@
     align-self: center;
     display: flex;
 }
+
 
 
 
