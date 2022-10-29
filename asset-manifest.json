@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/discordapp/static/css/main.352e7880.css",
+    "main.css": "/discordapp/static/css/main.ed5cc560.css",
     "main.js": "/discordapp/static/js/main.72395c51.js",
     "index.html": "/discordapp/index.html",
-    "main.352e7880.css.map": "/discordapp/static/css/main.352e7880.css.map",
+    "main.ed5cc560.css.map": "/discordapp/static/css/main.ed5cc560.css.map",
     "main.72395c51.js.map": "/discordapp/static/js/main.72395c51.js.map"
   },
   "entrypoints": [
-    "static/css/main.352e7880.css",
+    "static/css/main.ed5cc560.css",
     "static/js/main.72395c51.js"
   ]
 }
