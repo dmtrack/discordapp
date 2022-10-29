@@ -88,15 +88,18 @@
 .icon-nav {
     color: #B9BBBE;
     font-size: 20px;
+    transition: 0.3s;
 
 }
 
 .icon:hover {
     color: #3C8958;
+    transition: 0.3s;
 
 }
 .icon-nav:hover {
     color: #3C8958;
+    transition: 0.3s;
 }
 
 .input-nav {
@@ -192,7 +195,8 @@
 }
 
 .text-message:hover {
-    border: #3F4756 ;
+    border: #3F4756;
+    transition: 0.3s;;
 }
 
 .button-small {
@@ -214,7 +218,8 @@
 
 .button-small:hover {
     background: #338033;
-    cursor: pointer;}
+    cursor: pointer;
+    transition: 0.3s;}
 
 .list-users {
     display: flex;
