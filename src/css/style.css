@@ -114,10 +114,16 @@
     outline: none;
 }
 
-.input-nav:hover {
-    background-color: #B9BBBE;
-    border: #3F4756 ;
-    color: #36393F;
+/*.input-nav:hover {*/
+/*    background-color: #B9BBBE;*/
+/*    border: #3F4756 ;*/
+/*    color: #36393F;*/
+/*}*/
+
+.input-nav:hover:focus {
+    background-color: #b9bbbe;
+    border: #3f4756;
+    color: #36393f;
 }
 
 .input-message {
@@ -133,11 +139,10 @@
     margin: 0 15px;
 }
 
-.input-message:hover {
-    background-color: #B9BBBE;
-    border: #3F4756 ;
-    color: #36393F;
-    border: none;
+.input-message:hover:focus {
+    background-color: #b9bbbe;
+    border: #3f4756;
+    color: #36393f;
 }
 
 
@@ -192,9 +197,9 @@
     border-radius: 10px;
     font-size: 12px;
     margin: 5px;
-    background: linear-gradient(145deg, #171c20, #1b2125);
-    box-shadow:  5px 5px 10px #161b1e,
-    -5px -5px 10px #1c2328;
+    background: linear-gradient(145deg, #1d2021, #222728);
+    box-shadow:  7px 7px 65px #0f1111,
+    -7px -7px 65px #313739;
 }
 
 .message-image {
