@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/discordapp/static/js/main.45014757.js",
+    "index.html": "/discordapp/index.html",
+    "main.45014757.js.map": "/discordapp/static/js/main.45014757.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.45014757.js"
+  ]
+}
