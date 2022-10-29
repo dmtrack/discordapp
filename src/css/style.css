@@ -104,7 +104,7 @@
 
 .input-nav {
     align-self: center;
-    background-color: #3f4756;
+    background-color: #2f3136;
     border-radius: 5px;
     border-style: initial;
     color: #f8f8ff;
@@ -112,6 +112,7 @@
     height: 25px;
     padding: 15px;
     outline: none;
+    transition: 0.3s;
 }
 
 /*.input-nav:hover {*/
@@ -134,7 +135,7 @@
 
 .input-message {
     flex: 8 3;
-    background-color: #3F4756 ;
+    background-color: #2f3136;
     height: 25px;
     align-self: center;
     font-size: 15px;
@@ -144,6 +145,7 @@
     padding: 15px;
     margin: 0 15px;
     outline: none;
+    transition: 0.3s;
 }
 
 .input- message:hover {
@@ -158,6 +160,7 @@
     border: #3f4756;
     color: #36393f;
 }
+
 
 
 .sidebar-second {
@@ -265,9 +268,23 @@
     border-radius: 5px;
 
 }
+/*.user {*/
+/*    align-self: center;*/
+/*    border-radius: 10px;*/
+/*    border-width: 1px;*/
+/*    color: #b9bbbe;*/
+/*    display: block;*/
+/*    font-size: 14px;*/
+/*    height: 60px;*/
+/*    margin: 5px;*/
+/*    width: 200px;*/
+/*    transition: 0.3s;*/
+/*    box-shadow:  20px 20px 60px #323232,*/
+/*    -20px -20px 60px #444444;*/
+/*}*/
 .user {
     align-self: center;
-    border-radius: 10px;
+    border-radius: 3px;
     border-width: 1px;
     color: #b9bbbe;
     display: block;
@@ -276,8 +293,13 @@
     margin: 5px;
     width: 200px;
     transition: 0.3s;
-    box-shadow:  20px 20px 60px #323232,
-    -20px -20px 60px #444444;
+    /* box-shadow: 20px 20px 60px #323232, -20px -20px 60px #444444; */
+}
+
+.user:hover {
+    background: mediumpurple;
+    color: #b9bbbe;
+    cursor: pointer;
 }
 
 .user-image {
@@ -287,9 +309,7 @@
     margin: 10px 2px;
 }
 
-.user:hover {
-    background: mediumpurple;
-    cursor: pointer;}
+
 
 
 .member-image {
