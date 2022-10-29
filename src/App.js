@@ -1,20 +1,9 @@
-import { Navibar } from "./app/ui/Navibar";
-import { DirectMessages } from "./app/pages/Direct";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { PageNotFound } from "./app/pages/PageNotFound";
-import { Inbox } from "./app/pages/Inbox";
-import { Help } from "./app/pages/Help";
-import { Sidebar } from "./app/ui/Sidebar";
-import "./css/style.css";
-import "tippy.js/dist/tippy.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { SidebarSecond } from "./app/ui/SidebarSecond";
-import { Server } from "./app/components/Server";
-import { Notifications } from "./app/pages/Notifications";
-import { Members } from "./app/pages/Members";
+import "./App.css";
 
 function App() {
+  console.log("Hello world!");
   return (
+<<<<<<< HEAD
     <>
       <Router basename="/discordapp">
         <div className="main-container">
@@ -49,6 +38,11 @@ function App() {
         </div>
       </Router>
     </>
+=======
+    <div className="App">
+      <h1>Hello!</h1>
+    </div>
+>>>>>>> 79fb0a48aab3d50b8b48240b601b95b9c36ab15c
   );
 }
 
