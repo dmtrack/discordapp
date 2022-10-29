@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { SidebarSecond } from "./app/ui/SidebarSecond";
 import { Server } from "./app/components/Server";
 import { Page } from "./app/pages/Page";
+import { Notifications } from "./app/pages/Notifications";
 
 function App() {
   return (
@@ -33,12 +34,14 @@ function App() {
             <Navibar />
             {/*<Main />*/}
             <Routes>
-              <Route exact path="/" element={<DirectMessages />} />
+              <Route path="/" element={<DirectMessages />} />
               <Route path="/direct" element={<DirectMessages />} />
-              <Route path="/inbox" element={<Inbox />} />
-              <Route path="/help" element={<Help />} />
+              <Route path="navi/inbox" element={<Inbox />} />
+              <Route path="navi/help" element={<Help />} />
               <Route path="/:name" element={<Server />} />
-              <Route path="/:page" element={<Page />} />
+              <Route path="navi/notifications" element={<Notifications />} />
+              <Route path="navi/help" element={<Help />} />
+
               {/*<Route path="/category/:name" element={<Category />} />*/}
               {/*<Route path="/meal/:id" element={<Recipe />} />*/}
               <Route path="*" element={<PageNotFound />} />

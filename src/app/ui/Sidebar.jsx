@@ -56,24 +56,22 @@ function Sidebar() {
         </Tippy>
       </div>
       {menuItem.map((item, index) => (
-        <>
-          <Tippy
-            content={<span>{item.name}</span>}
-            placement="right"
-            key={index + 1}
+        <Tippy
+          content={<span>{item.name}</span>}
+          placement="right"
+          key={index + 1}
+        >
+          <Link
+            to={item.path}
+            className="link"
+            activeclassname="active"
+            key={index + 2}
           >
-            <Link
-              to={item.path}
-              className="link"
-              activeclassname="active"
-              key={index + 2}
-            >
-              <div className="icon" key={index + 3}>
-                {item.icon}{" "}
-              </div>
-            </Link>
-          </Tippy>
-        </>
+            <div className="icon" key={index + 3}>
+              {item.icon}{" "}
+            </div>
+          </Link>
+        </Tippy>
       ))}
     </div>
   );

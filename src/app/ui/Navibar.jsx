@@ -36,7 +36,7 @@ function Navibar({ children }) {
             </Tippy>
             <Tippy content={<span>notifications</span>} placement="bottom">
               <Link
-                to="/notifications"
+                to="/navi/notifications"
                 key="2"
                 className="link"
                 activeclassname="active"
@@ -48,7 +48,7 @@ function Navibar({ children }) {
             </Tippy>
             <Tippy content={<span>members</span>} placement="bottom">
               <Link
-                to="/members"
+                to="/navi/members"
                 key="3"
                 className="link"
                 activeclassname="active"
@@ -63,7 +63,7 @@ function Navibar({ children }) {
             <Search className="input-nav" placeholder="Search" />
             <Tippy content={<span>inbox</span>} placement="bottom">
               <Link
-                to="/inbox"
+                to="/navi/inbox"
                 className="link"
                 activeclassname="active"
                 key="4"
@@ -75,7 +75,7 @@ function Navibar({ children }) {
             </Tippy>
             <Tippy content={<span>help</span>} placement="bottom">
               <Link
-                to="/help"
+                to="/navi/help"
                 className="link"
                 activeclassname="active"
                 key="5"
