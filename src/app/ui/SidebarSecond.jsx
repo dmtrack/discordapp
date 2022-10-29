@@ -1,52 +1,66 @@
-function SidebarSecond() {
-  const mainLogo = {
-    path: "/direct",
-    name: "Direct messages",
-    icon: "",
-  };
-  const menuItem = [
-    {
-      path: "/Server1",
-      name: "steamServer",
-      icon: "",
-    },
-    {
-      path: "/Server2",
-      name: "snapchatServer",
-      icon: "",
-    },
-    {
-      path: "/Server3",
-      name: "githubServer",
-      icon: "",
-    },
-    {
-      path: "/Server4",
-      name: "redditServer",
-      icon: "",
-    },
-    {
-      path: "/Server5",
-      name: "behanceServer",
-      icon: "",
-    },
-  ];
+import { useState, useEffect } from "react";
+import { API_URL, API_KEY } from "../../config";
+import { Preloader } from "../components/Preloader";
+import React from "react";
+
+function SidebarSecond(name) {
+  const [users, setUsers] = useState([]);
+  const [userLoading, setUserLoading] = useState(false);
+
+  useEffect(() => {
+    try {
+      setUserLoading(true);
+      fetch(API_URL, { headers: { Authorization: API_KEY } })
+        .then((responce) => responce.json())
+        .then((data) => {
+          setUsers(data.featured);
+          setUserLoading(false);
+        });
+    } catch (error) {
+      console.error(error);
+      setUserLoading(false);
+    }
+  }, []);
+
   return (
     <>
-      <div>
+      <div style={{ verticalAlign: "middle" }}>
+        Direct messages
         <div
           style={{
-            height: "50px",
+            height: "40px",
             borderBottom: "outset",
             borderWidth: "1px",
             borderColor: "darkgray",
-            display: "table-cell",
+            display: "flex",
             verticalAlign: "middle",
+            alignItems: "center",
           }}
-        >
-          Second NavBar Second NavBar Second NavBar
-        </div>
+        ></div>
       </div>
+      {userLoading ? (
+        <Preloader />
+      ) : (
+        <div className="list-users">
+          {users.map((u) => (
+            <div className="user" key={u.id}>
+              <img
+                className="user-image"
+                src={`https://avatars.dicebear.com/api/avataaars/${(
+                  Math.random() + 1
+                )
+                  .toString(36)
+                  .substring(7)}.svg`}
+                alt="poster"
+                key={u.id}
+              />
+              <span style={{ verticalAlign: "middle" }}>
+                {u.name.toLowerCase()}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }

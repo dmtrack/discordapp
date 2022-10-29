@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { ServerList } from "../components/Serverlist";
 import { Preloader } from "../components/Preloader";
+import { useState } from "react";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 function Main() {

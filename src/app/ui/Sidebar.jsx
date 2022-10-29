@@ -7,7 +7,6 @@ import {
   FaBehanceSquare,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { MdOutlineRemove } from "react-icons/md";
 import Tippy from "@tippyjs/react";
 
 function Sidebar() {
@@ -18,55 +17,58 @@ function Sidebar() {
   };
   const menuItem = [
     {
-      path: "/Server1",
+      path: "/Steam server",
       name: "steamServer",
       icon: <FaSteamSquare size={38} />,
     },
     {
-      path: "/Server2",
+      path: "/Snapchat server",
       name: "snapchatServer",
       icon: <FaSnapchatSquare size={38} />,
     },
     {
-      path: "/Server3",
+      path: "/Github server",
       name: "githubServer",
       icon: <FaGithubSquare size={38} />,
     },
     {
-      path: "/Server4",
+      path: "/Reddit server",
       name: "redditServer",
       icon: <FaRedditSquare size={38} />,
     },
     {
-      path: "/Server5",
+      path: "/Behance server",
       name: "behanceServer",
       icon: <FaBehanceSquare size={38} />,
     },
   ];
   return (
-    <div className="sidebar">
-      <div className="top_section">
+    <div className="sidebar" key="91">
+      <div className="top_section" key="92">
         <Tippy
-          content={<span style={{ color: "wheat" }}>{mainLogo.name}</span>}
+          content={<span style={{ color: "ghostwhite" }}>{mainLogo.name}</span>}
           placement="right"
+          key="93"
         >
-          <Link to={mainLogo.path} key="99">
+          <Link to={mainLogo.path} key="94">
             {mainLogo.icon}{" "}
           </Link>
         </Tippy>
-        <div className="bars">
-          <MdOutlineRemove />
-        </div>
       </div>
       {menuItem.map((item, index) => (
         <>
           <Tippy
             content={<span>{item.name}</span>}
             placement="right"
-            key={index}
+            key={index + 1}
           >
-            <Link to={item.path} className="link" activeclassname="active">
-              <div className="icon" key={index}>
+            <Link
+              to={item.path}
+              className="link"
+              activeclassname="active"
+              key={index + 2}
+            >
+              <div className="icon" key={index + 3}>
                 {item.icon}{" "}
               </div>
             </Link>

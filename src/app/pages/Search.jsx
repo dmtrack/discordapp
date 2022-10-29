@@ -1,10 +1,9 @@
-function Search() {
+import React from "react";
+
+function Search({ className, placeholder }) {
   return (
     <>
-      <div className="main-content">
-        {" "}
-        <h1>Search</h1>
-      </div>
+      <input type="search" className={className} placeholder={placeholder} />
     </>
   );
 }

@@ -1,12 +1,17 @@
 import React from "react";
-import { NavbarBrand, Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react";
+import { HiInboxArrowDown } from "react-icons/hi2";
+import { TfiHelpAlt } from "react-icons/tfi";
+import { TiMessages } from "react-icons/ti";
+import { IoMdNotifications } from "react-icons/io";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { Search } from "../pages/Search";
 
-function Navibar() {
+function Navibar({ children }) {
   return (
     <>
-      <Navbar
+      <div
         bg="#36393F"
         variant="dark"
         style={{
@@ -15,8 +20,8 @@ function Navibar() {
           borderColor: "darkgray",
         }}
       >
-        <div style={{ display: "flex" }}>
-          <Nav.Link style={{ display: "flex" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex" }}>
             <Tippy content={<span>Direct</span>} placement="bottom">
               <Link
                 to="/direct"
@@ -24,33 +29,38 @@ function Navibar() {
                 className="link"
                 activeclassname="active"
               >
-                Direct
+                <div className="icon-nav" key="1">
+                  <TiMessages />
+                </div>
               </Link>
             </Tippy>
-            <Tippy content={<span>Server 1</span>} placement="bottom">
+            <Tippy content={<span>notifications</span>} placement="bottom">
               <Link
-                to="/server1"
+                to="/notifications"
                 key="2"
                 className="link"
                 activeclassname="active"
               >
-                Server 1
+                <div className="icon-nav" key="2">
+                  <IoMdNotifications />
+                </div>
               </Link>
             </Tippy>
-
-            <Tippy content={<span>Server 2</span>} placement="bottom">
+            <Tippy content={<span>members</span>} placement="bottom">
               <Link
-                to="/server2"
+                to="/members"
                 key="3"
                 className="link"
                 activeclassname="active"
               >
-                Server 2
+                <div className="icon-nav" key="3">
+                  <BsFillPeopleFill />
+                </div>
               </Link>
             </Tippy>
-          </Nav.Link>
-          <Nav.Link style={{ display: "flex" }}>
-            <input type="search" />
+          </div>
+          <div style={{ display: "flex" }}>
+            <Search className="input-nav" placeholder="Search" />
             <Tippy content={<span>inbox</span>} placement="bottom">
               <Link
                 to="/inbox"
@@ -58,7 +68,9 @@ function Navibar() {
                 activeclassname="active"
                 key="4"
               >
-                <div>Icon</div>
+                <div className="icon-nav" key="4">
+                  <HiInboxArrowDown />
+                </div>
               </Link>
             </Tippy>
             <Tippy content={<span>help</span>} placement="bottom">
@@ -68,12 +80,15 @@ function Navibar() {
                 activeclassname="active"
                 key="5"
               >
-                <div>Icon</div>
+                <div className="icon-nav" key="6">
+                  <TfiHelpAlt />
+                </div>
               </Link>
             </Tippy>
-          </Nav.Link>
+          </div>
         </div>
-      </Navbar>
+        <main>{children}</main>
+      </div>
     </>
   );
 }
