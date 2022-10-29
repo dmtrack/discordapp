@@ -117,6 +117,7 @@
 .input-nav:hover {
     background-color: #B9BBBE;
     border: #3F4756 ;
+    color: #36393F;
 }
 
 .input-message {
@@ -135,6 +136,8 @@
 .input-message:hover {
     background-color: #B9BBBE;
     border: #3F4756 ;
+    color: #36393F;
+    border: none;
 }
 
 
