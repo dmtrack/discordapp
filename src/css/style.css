@@ -229,16 +229,18 @@
 
 }
 .user {
-    display: block;
-    color: #B9BBBE;
-    height: 60px;
-    width: 200px;
-    border-width: 1px;
-    border-radius: 10px;
-    font-size: 14px;
-    margin: 5px;
     align-self: center;
+    border-radius: 10px;
+    border-width: 1px;
+    color: #b9bbbe;
+    display: block;
+    font-size: 14px;
+    height: 60px;
+    margin: 5px;
+    width: 200px;
+    transition: 0.3s;
 }
+
 .user-image {
     width: 30px;
     height: 30px;
