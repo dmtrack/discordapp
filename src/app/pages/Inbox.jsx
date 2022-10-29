@@ -3,7 +3,7 @@ function Inbox() {
     <>
       <div className="main-content">
         {" "}
-        <h1>Inbox</h1>
+        <h1 className="heading">Inbox</h1>
       </div>
     </>
   );

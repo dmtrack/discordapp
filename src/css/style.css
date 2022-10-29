@@ -154,6 +154,11 @@
     margin: 10px 10px;
 }
 
+.heading {
+    margin: 0 15px;
+
+}
+
 .text-area {
     display: flex;
     padding: 10px 10px;
@@ -174,6 +179,10 @@
     border-radius: 10px;
     font-size: 12px;
     margin: 5px;
+}
+
+.text-message:hover {
+    border: #3F4756 ;
 }
 
 .button-small {
@@ -228,9 +237,18 @@
 }
 
 
+
+
 .user:hover {
     background: mediumpurple;
     cursor: pointer;}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    padding: 2px 2px;
+    margin: 10px 2px;
+}
 
 
 

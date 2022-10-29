@@ -5,7 +5,7 @@ function Notifications() {
   return (
     <>
       <div className="main-content">
-        <h1>Your notifications</h1>
+        <h1 className="heading">Your notifications</h1>
 
         <div style={{ display: "flex" }}>
           <Search className="input-message" placeholder="Type here..." />

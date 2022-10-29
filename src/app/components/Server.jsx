@@ -6,7 +6,7 @@ import { Preloader } from "./Preloader";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function Server() {
-  let [title, setTitle] = useState("hackers");
+  const [title, setTitle] = useState("hackers");
 
   let { name } = useParams();
   const [data, setData] = useState([]);
@@ -30,7 +30,7 @@ function Server() {
   useEffect(() => {
     requestData();
   }, []);
-
+  //
   // if (data) {
   //   switch (name) {
   //     case "Steam server":

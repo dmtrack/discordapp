@@ -3,7 +3,7 @@ function PageNotFound() {
     <>
       <div className="main-content">
         {" "}
-        <h1>404 page not found</h1>
+        <h1 className="heading">404 page not found</h1>
       </div>
     </>
   );

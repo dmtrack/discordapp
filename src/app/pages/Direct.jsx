@@ -5,7 +5,7 @@ function DirectMessages() {
   return (
     <>
       <div className="main-content">
-        <h1>Direct messages</h1>
+        <h1 className="heading">Direct messages</h1>
         <div className="text-area">TEXT</div>
         <div style={{ display: "flex" }}>
           <Search className="input-message" placeholder="Type here..." />

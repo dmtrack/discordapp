@@ -33,7 +33,6 @@ function SidebarSecond(name) {
             borderWidth: "1px",
             borderColor: "darkgray",
             display: "flex",
-            verticalAlign: "middle",
             alignItems: "center",
           }}
         ></div>
