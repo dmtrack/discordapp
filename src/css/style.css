@@ -110,7 +110,7 @@
     color: #f8f8ff;
     font-size: 15px;
     height: 25px;
-    padding-left: 15px;
+    padding: 15px;
     outline: none;
 }
 
@@ -120,7 +120,13 @@
 /*    color: #36393F;*/
 /*}*/
 
-.input-nav:hover:focus {
+.input-nav:hover {
+    background-color: #b9bbbe;
+    border: #3f4756;
+    color: #36393f;
+}
+
+.input-nav:focus {
     background-color: #b9bbbe;
     border: #3f4756;
     color: #36393f;
@@ -137,9 +143,17 @@
     border-radius: 5px;
     padding: 15px;
     margin: 0 15px;
+    outline: none;
 }
 
-.input-message:hover:focus {
+.input- message:hover {
+    background-color: #b9bbbe;
+    border: #3f4756;
+    color: #36393f;
+    outline: none;
+}
+
+.input-message:focus {
     background-color: #b9bbbe;
     border: #3f4756;
     color: #36393f;
