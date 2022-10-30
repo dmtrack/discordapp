@@ -20,7 +20,13 @@ function Navibar({ children }) {
           borderColor: "darkgray",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "2px 0",
+          }}
+        >
           <div style={{ display: "flex" }}>
             <Tippy content={<span>Direct</span>} placement="bottom">
               <Link

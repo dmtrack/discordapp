@@ -30,7 +30,6 @@ function App() {
           </div>
           <div className="third-container">
             <Navibar />
-            {/*<Main />*/}
             <Routes>
               <Route path="/" element={<DirectMessages />} />
               <Route path="/direct" element={<DirectMessages />} />
@@ -40,9 +39,6 @@ function App() {
               <Route path="/:name" element={<Server />} />
               <Route path="navi/notifications" element={<Notifications />} />
               <Route path="navi/help" element={<Help />} />
-
-              {/*<Route path="/category/:name" element={<Category />} />*/}
-              {/*<Route path="/meal/:id" element={<Recipe />} />*/}
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
