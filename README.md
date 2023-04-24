@@ -1,5 +1,5 @@
 ## Discord App prototype
-[https://dmtrack.github.io/discordapp/](https://dmtrack.github.io/discordapp/)
+[deploy link](https://dmtrack.github.io/discordapp/)
 
 ### Description
 This is test task for company. My vision of the Discord App
